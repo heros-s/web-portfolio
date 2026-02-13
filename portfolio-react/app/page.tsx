@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar"
 import { HeroSection } from "./components/HeroSection"
 import { useState } from "react";
 import { ProjectCard } from './components/ProjectCard'
+import { AboutSection } from './components/AboutSection'
 
 export default function Home() {
   const [filter, setFilter] = useState('all')
@@ -36,38 +37,42 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
-    <main className="bg-zinc-950 text-white min-h-screen p-6">
-      <h1 className="text-4xl font-bold mb-10">Meus Projetos</h1>
-      {/* Aqui os dados do projeto são PASSADOS via props */}
-      {/*Itera sobre o array e cria um card para cada item*/}
-
-      <div className="flex gap-3 mb-10">
-        {['all', 'Automação', 'BI', 'Data'].map(cat => (
-          <button
-            key={cat}
-            onClick={() => setFilter(cat)}
-            className={`px-4 py rounded-lg border transition ${filter === cat
-              ? 'bg-cyan-500 text-black border-cyan-500'
-              : 'border-zinc-700 hover:border-cyan-400'
-              }`}
+      <AboutSection />
+      
+      {/* Seção de Projetos */}
+      <section id="projetos" className="bg-zinc-950 text-white py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold mb-10">Meus Projetos</h1>
+          
+          {/* Filtros */}
+          <div className="flex gap-3 mb-10 flex-wrap">
+            {['all', 'Automação', 'BI', 'Data'].map(cat => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-2 rounded-lg border transition ${filter === cat
+                  ? 'bg-cyan-500 text-black border-cyan-500'
+                  : 'border-zinc-700 hover:border-cyan-400'
+                  }`}
               >
                 {cat === 'all' ? 'Todos' : cat.toUpperCase()}
               </button>
             ))}
-      </div>
+          </div>
 
-      {/* Cards Filtrados */}
-      <div className="grid md:grid-cols-2 gap-6">
-        {filtered.map(project => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            subtitle={project.subtitle}
-            category={project.category}
-          />
-        ))}
-      </div>
-    </main>
+          {/* Cards Filtrados */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filtered.map(project => (
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                subtitle={project.subtitle}
+                category={project.category}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }
