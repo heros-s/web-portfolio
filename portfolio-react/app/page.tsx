@@ -72,9 +72,9 @@ export default function Home() {
       {/* Seção de Projetos */}
       <section id="projetos" className="bg-zinc-950 text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-10">Meus Projetos</h1>
+          <h1 className="text-4xl font-bold mb-10 text-center">Meus Projetos</h1>
           {/* Filtros */}
-          <div className="flex gap-3 mb-10 flex-wrap">
+          <div className="flex gap-3 mb-10 flex-wrap justify-center">
             {['all', 'Automação', 'BI', 'Data'].map(cat => (
               <button
                 key={cat}
