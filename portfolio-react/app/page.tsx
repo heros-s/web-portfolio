@@ -1,5 +1,6 @@
 'use client' // Necesseário para usar hooks como useState
-
+import { Navbar } from "./components/Navbar"
+import { HeroSection } from "./components/HeroSection"
 import { useState } from "react";
 import { ProjectCard } from './components/ProjectCard'
 
@@ -32,6 +33,9 @@ export default function Home() {
     : projects.filter(p => p.category === filter)
 
   return (
+    <>
+      <Navbar />
+      <HeroSection />
     <main className="bg-zinc-950 text-white min-h-screen p-6">
       <h1 className="text-4xl font-bold mb-10">Meus Projetos</h1>
       {/* Aqui os dados do projeto são PASSADOS via props */}
@@ -64,5 +68,6 @@ export default function Home() {
         ))}
       </div>
     </main>
+    </>
   )
 }
