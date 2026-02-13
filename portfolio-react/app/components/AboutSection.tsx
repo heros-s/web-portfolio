@@ -1,5 +1,11 @@
 // Sessão Sobre Mim
+import { SiN8N } from "react-icons/si";
+import { BsFileEarmarkBarGraph } from "react-icons/bs";
+import { TrendingUp } from "lucide-react";
 export function AboutSection() {
+  // Using className text-cyan-400 for consistency with theme, and size.
+  // text-3xl is 30px faik.
+
   return (
     <section id="sobre" className="bg-zinc-950 text-white min-h-screen py-20 px-6">
       <div className="max-w-6xl mx-auto">
@@ -51,19 +57,25 @@ export function AboutSection() {
         {/* Skills Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition-all">
-            <div className="text-3xl mb-3">⚙️</div>
+            <div className="mb-3 text-cyan-400">
+              <SiN8N size={32} />
+            </div>
             <h3 className="text-xl font-bold mb-2">Automação</h3>
             <p className="text-sm text-zinc-400">n8n, Python, workflows inteligentes</p>
           </div>
 
           <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition-all">
-            <div className="text-3xl mb-3">📊</div>
+            <div className="mb-3 text-cyan-400">
+              <BsFileEarmarkBarGraph size={32} />
+            </div>
             <h3 className="text-xl font-bold mb-2">Data & BI</h3>
             <p className="text-sm text-zinc-400">Power BI, ETL, análise e modelagem</p>
           </div>
 
           <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition-all">
-            <div className="text-3xl mb-3">🧠</div>
+            <div className="mb-3 text-cyan-400">
+              <TrendingUp size={32} />
+            </div>
             <h3 className="text-xl font-bold mb-2">Estratégia & IA</h3>
             <p className="text-sm text-zinc-400">Inteligência corporativa, decisões data-driven</p>
           </div>
@@ -131,7 +143,7 @@ export function AboutSection() {
                 <span className="text-sm font-bold text-cyan-400">87.5%</span>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-3 overflow-hidden">
-                <div className="bg-cyan-400 h-full rounded-full transition-all duration-1000" style={{ width: '87.5%' }}></div>
+                <div className="bg-cyan-400 h-full rounded-full transition-all duration-1000 w-[87.5%]"></div>
               </div>
             </div>
           </div>
