@@ -99,7 +99,7 @@ export function ContactSection() {
                             className="w-full bg-zinc-900 border border-zinc-800 px-4 py-3 rounded-lg text-white focus:outline-none focus:border-cyan-500 transition-all"
                             required
                         />
-                         <ValidationError 
+                        <ValidationError 
                             prefix="Email" 
                             field="email"
                             errors={state.errors}
