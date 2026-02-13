@@ -5,6 +5,7 @@ import { HeroSection } from "./components/HeroSection"
 import { useState } from "react";
 import { ProjectCard } from './components/ProjectCard'
 import { AboutSection } from './components/AboutSection'
+import { ContactSection } from './components/ContactSection'
 import { Footer } from './components/Footer'
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
     },
     {
       id: 2,
-      title: 'Dashboard Financeiro',
+      title: 'Dashboard Financeiro para Análise de Performance',
       subtitle: 'Power BI',
       categories: ['BI']
     },
@@ -100,6 +101,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ContactSection />
       <Footer />
     </>
   )
