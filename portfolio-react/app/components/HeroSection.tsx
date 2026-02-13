@@ -3,7 +3,7 @@ export function HeroSection() {
     return (
         <section
         id="home"
-        className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black flex items-center justify-center pt-20"
+        className="min-h-screen bg-linear-to-b from-black via-gray-900 to-black flex items-center justify-center pt-20"
         >
             <div className="max-w-4xl mx-auto px-6 text-center">
                 {/* Título Principal */}

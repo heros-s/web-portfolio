@@ -17,7 +17,7 @@ export function Footer() {
                             href="https://www.linkedin.com/in/heros-dinao" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-zinc-400 hover:text-cyan-400 transition"
+                            className="text-zinc-400 hover:text-cyan-400 transition-all"
                             aria-label="LinkedIn"
                         >
                             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ export function Footer() {
                             href="https://github.com/heros-s" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-zinc-400 hover:text-cyan-400 transition"
+                            className="text-zinc-400 hover:text-cyan-400 transition-all"
                             aria-label="GitHub"
                         >
                             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -41,7 +41,7 @@ export function Footer() {
                         {/* Email */}
                         <a 
                             href="mailto:herosdefreitas@gmail.com" 
-                            className="text-zinc-400 hover:text-cyan-400 transition"
+                            className="text-zinc-400 hover:text-cyan-400 transition-all"
                             aria-label="Email"
                         >
                             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export function Footer() {
                             href="https://wa.me/5541987537615" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-zinc-400 hover:text-cyan-400 transition"
+                            className="text-zinc-400 hover:text-cyan-400 transition-all"
                             aria-label="WhatsApp"
                         >
                             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

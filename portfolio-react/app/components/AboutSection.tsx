@@ -18,7 +18,7 @@ export function AboutSection() {
             <div className="flex gap-4">
               <a 
                 href="#projetos" 
-                className="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-lg hover:bg-cyan-300 transition"
+                className="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-lg hover:bg-cyan-300 transition-all"
               >
                 Ver Projetos
               </a>
@@ -50,19 +50,19 @@ export function AboutSection() {
 
         {/* Skills Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition">
+          <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition-all">
             <div className="text-3xl mb-3">⚙️</div>
             <h3 className="text-xl font-bold mb-2">Automação</h3>
             <p className="text-sm text-zinc-400">n8n, Python, workflows inteligentes</p>
           </div>
 
-          <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition">
+          <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition-all">
             <div className="text-3xl mb-3">📊</div>
             <h3 className="text-xl font-bold mb-2">Data & BI</h3>
             <p className="text-sm text-zinc-400">Power BI, ETL, análise e modelagem</p>
           </div>
 
-          <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition">
+          <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-cyan-400 transition-all">
             <div className="text-3xl mb-3">🧠</div>
             <h3 className="text-xl font-bold mb-2">Estratégia & IA</h3>
             <p className="text-sm text-zinc-400">Inteligência corporativa, decisões data-driven</p>
