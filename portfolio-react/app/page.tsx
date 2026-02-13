@@ -34,7 +34,7 @@ export default function Home() {
     {
       id: 4,
       title: 'Dashboard de Monitoramento de Créditos de IA',
-      subtitle: 'Power BI',
+      subtitle: 'Looker Studio',
       categories: ['BI']
     },
 
