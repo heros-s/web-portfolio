@@ -9,7 +9,7 @@
     "categoria": "automacao",
     "tecnologias": ["n8n", "Slack", "JavaScript", "APIs"],
     "problema": "O processo anterior apresentava um fluxo 100% manual e repetitivo executado diariamente pelo RH. Com cerca de 300 registros de horas extras por mês, a profissional responsável precisava extrair o relatório do ponto, filtrar colaboradores com horas extras, verificar se o chamado havia sido aberto e cobrar individualmente. Isso gerava sobrecarga operacional, alto consumo de tempo e limitava a atuação do RH em atividades mais estratégicas.",
-    "solucao": "Desenvolveu-se um fluxo automatizado no n8n, executando diariamente, que consome automaticamente o relatório de ponto em CSV, identifica colaboradores com horas extras registradas, verifica se existe ticket correspondente na plataforma de chamados e envia mensagens diretas na plataforma de comunicação interna para o colaborador (quando o chamado não foi aberto) ou para o gestor (quando o chamado está pendente de aprovação). O fluxo utiliza um usuário específico com uma persona própria, tornando a comunicação mais natural.",
+    "solucao": "Foi implementado um fluxo automatizado no n8n, executando diariamente, que consome automaticamente o relatório de ponto em CSV, identifica colaboradores com horas extras registradas, verifica se existe ticket correspondente na plataforma de chamados e envia mensagens diretas na plataforma de comunicação interna para o colaborador (quando o chamado não foi aberto) ou para o gestor (quando o chamado está pendente de aprovação). O fluxo utiliza um usuário específico com uma persona própria, tornando a comunicação mais natural.",
     "impacto": "Eliminação de aproximadamente 2 horas diárias de trabalho manual do RH. Redução significativa de sobrecarga operacional. Padronização e maior controle do processo de validação. Liberação do tempo da profissional de RH para atuação em projetos mais estratégicos.",
     "metricas": {
         "tempoEconomizado": "~2 horas/dia",
@@ -17,7 +17,8 @@
         "mensal": "~40 horas/mês"
     },
     "desafios": "Desenvolvimento de fluxos de disparo automático de mensagens. Estruturação de código focado em manutenção.",
-    "imagem": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop",
+    "imagem": "/projects/slack-print-en.JPG",
+    "video": "https://www.youtube.com/embed/rrQgWHtkBcg?si=zcxhcCAGuDnbndCZ",
     "status": "producao"
     },
     {

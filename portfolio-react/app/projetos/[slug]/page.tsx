@@ -7,6 +7,7 @@ import { ProjectProblem } from "@/app/components/ProjectProblem"
 import { ProjectSolution } from "@/app/components/ProjectSolution"
 import { ProjectImpact } from "@/app/components/ProjectImpact"
 import { ProjectTechStack } from "@/app/components/ProjectTechStack"
+import { ProjectMedia } from "@/app/components/ProjectMedia"
 
 import { use } from 'react'
 
@@ -30,6 +31,11 @@ return (
         titulo={project.titulo}
         subtitulo={project.subtitulo}
         descricaoCurta={project.descricaoCurta}
+    />
+    <ProjectMedia 
+        imagem={project.imagem}
+        video={(project as { video?: string }).video}
+        titulo={project.titulo}
     />
     <ProjectProblem problema={project.problema} />
     <ProjectSolution 
