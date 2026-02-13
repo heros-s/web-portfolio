@@ -1,27 +1,20 @@
-// Este é um exemplo para você entender o padrão
 interface ProjectHeroProps {
   titulo: string
   subtitulo: string
   descricaoCurta: string
-  imagem: string
 }
 
 export function ProjectHero({ 
   titulo, 
   subtitulo, 
   descricaoCurta, 
-  imagem 
 }: ProjectHeroProps) {
   return (
-    <section className="relative h-96 bg-cover bg-center" style={{ backgroundImage: `url(${imagem})` }}>
-      {/* Overlay escuro para ler o texto */}
-      <div className="absolute inset-0 bg-black/60"></div>
-      
-      {/* Conteúdo */}
-      <div className="relative h-full flex flex-col items-center justify-center text-white text-center px-6 max-w-4xl mx-auto">
-        <p className="text-cyan-400 mb-4 text-sm uppercase">{subtitulo}</p>
-        <h1 className="text-5xl font-bold mb-4">{titulo}</h1>
-        <p className="text-xl text-zinc-300">{descricaoCurta}</p>
+    <section className="bg-zinc-950 pt-32 pb-12 px-6 border-b border-zinc-900">
+      <div className="flex flex-col items-center justify-center text-white text-center max-w-4xl mx-auto">
+        <p className="text-cyan-400 mb-4 text-sm uppercase tracking-wider">{subtitulo}</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">{titulo}</h1>
+        <p className="text-xl text-zinc-400 max-w-2xl">{descricaoCurta}</p>
       </div>
     </section>
   )

@@ -7,58 +7,18 @@ import { ProjectCard } from './components/ProjectCard'
 import { AboutSection } from './components/AboutSection'
 import { ContactSection } from './components/ContactSection'
 import { Footer } from './components/Footer'
+import projectsData from "./projetos/data/projects.json"
 
 export default function Home() {
   const [filter, setFilter] = useState('all')
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Automação de Horas Extras',
-      subtitle: 'n8n + Slack',
-      categories: ['Automação', 'Data']
-    },
-    {
-      id: 2,
-      title: 'Dashboard Financeiro para Análise de Performance',
-      subtitle: 'Power BI',
-      categories: ['BI']
-    },
-    {
-      id: 3,
-      title: 'Pipeline de Dados de Mailings',
-      subtitle: 'Python + ETL',
-      categories: ['Automação', 'Data']
-    },
-
-    {
-      id: 4,
-      title: 'Dashboard de Monitoramento de Créditos de IA',
-      subtitle: 'Looker Studio',
-      categories: ['BI']
-    },
-
-    {
-      id: 5,
-      title: 'Dashboard de Experiência do Colaborador',
-      subtitle: 'eNPS + Power BI',
-      categories: ['BI', 'Automação']
-    },
-
-    {
-      id: 6,
-      title: 'Automação de Cálculo ESG',
-      subtitle: 'Google Sheets + Apps Script (Javascript)',
-      categories: ['Automação']
-    },
-
-    {
-      id: 7,
-      title: 'Coleta de Dados Salariais',
-      subtitle: 'Python + Selenium (Web Scraping)',
-      categories: ['Automação', 'Data']
-    }
-  ]
+  const projects = projectsData.projetos.map(p => ({
+    id: p.id,
+    title: p.titulo,
+    subtitle: p.subtitulo,
+    categories: p.categoria ? [p.categoria] : [],
+    slug: p.slug  // ✅ ADICIONA O SLUG
+  }))
 
   const filtered = filter === 'all'
     ? projects
@@ -96,6 +56,7 @@ export default function Home() {
                 title={project.title}
                 subtitle={project.subtitle}
                 categories={project.categories}
+                slug={project.slug}
               />
             ))}
           </div>
