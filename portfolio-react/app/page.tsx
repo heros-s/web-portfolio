@@ -26,6 +26,34 @@ export default function Home() {
       title: 'Pipeline de Dados de Mailings',
       subtitle: 'Python + ETL',
       category: 'Data'
+    },
+
+    {
+      id: 4,
+      title: 'Dashboard de Monitoramento de Créditos de IA',
+      subtitle: 'Power BI',
+      category: 'BI'
+    },
+
+    {
+      id: 5,
+      title: 'Dashboard de Experiência do Colaborador',
+      subtitle: 'eNPS + Power BI',
+      category: 'BI'
+    },
+
+    {
+      id: 6,
+      title: 'Automação de Cálculo ESG',
+      subtitle: 'Google Sheets + Apps Script (Javascript)',
+      category: 'Automação'
+    },
+
+    {
+      id: 7,
+      title: 'Coleta de Dados Salariais',
+      subtitle: 'Python + Selenium (Web Scraping)',
+      category: 'Data'
     }
   ]
 
@@ -38,12 +66,10 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
-      
       {/* Seção de Projetos */}
       <section id="projetos" className="bg-zinc-950 text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold mb-10">Meus Projetos</h1>
-          
           {/* Filtros */}
           <div className="flex gap-3 mb-10 flex-wrap">
             {['all', 'Automação', 'BI', 'Data'].map(cat => (
@@ -59,9 +85,8 @@ export default function Home() {
               </button>
             ))}
           </div>
-
           {/* Cards Filtrados */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {filtered.map(project => (
               <ProjectCard
                 key={project.id}
