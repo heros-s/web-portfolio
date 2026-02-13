@@ -1,4 +1,4 @@
-// HeroSection do portfólio
+// Hero Section do portfólio
 export function HeroSection() {
     return (
         <section
