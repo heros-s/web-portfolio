@@ -1,3 +1,4 @@
+// Sessão Sobre Mim
 export function AboutSection() {
   return (
     <section id="sobre" className="bg-zinc-950 text-white min-h-screen py-20 px-6">
@@ -70,7 +71,7 @@ export function AboutSection() {
 
         {/* Timeline de Experiência */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8">Jornada Profissional</h2>
+          <h2 className="text-3xl font-bold mb-8">Jornada Profissional com Dados</h2>
           <div className="space-y-6">
             {/* Item 1 */}
             <div className="flex gap-4">
@@ -78,10 +79,10 @@ export function AboutSection() {
               <div>
                 <h3 className="font-bold text-lg">Estagiário de Business Analytics</h3>
                 <p className="text-sm text-zinc-400">
-                  Setor de Inteligência Corporativa (5 meses) • Empresa
+                  Setor de Inteligência Corporativa (5 meses) • PGMais
                 </p>
                 <p className="text-sm text-zinc-300 mt-2">
-                  Projetos com Diretoria, RH, Marketing, Financeiro e áreas estratégicas
+                  Atuo em BI estratégico para múltiplas áreas e alta gestão, criando dashboards e análises corporativas<br />enquanto automatizo processos com n8n, Python e agentes de IA para ganho de eficiência operacional.
                 </p>
               </div>
             </div>
@@ -92,10 +93,10 @@ export function AboutSection() {
               <div>
                 <h3 className="font-bold text-lg">Estagiário de Business Analytics</h3>
                 <p className="text-sm text-zinc-400">
-                  Setor Financeiro (5 meses) • Empresa
+                  Setor Financeiro (5 meses) • PGMais
                 </p>
                 <p className="text-sm text-zinc-300 mt-2">
-                  BI, análise de dados e eficiência operacional
+                  Desenvolvi dashboards e análises de FP&A, automatizando processos, consultando bases em SQL<br />e apresentando resultados financeiros e operacionais para stakeholders e diretoria.
                 </p>
               </div>
             </div>
@@ -106,10 +107,10 @@ export function AboutSection() {
               <div>
                 <h3 className="font-bold text-lg">Estagiário de Control Desk</h3>
                 <p className="text-sm text-zinc-400">
-                  Primeira posição (10 meses) • Empresa
+                  Primeira posição (10 meses) • PGMais
                 </p>
                 <p className="text-sm text-zinc-300 mt-2">
-                  Operações, controle e base para transição para dados
+                  Atuei no monitoramento operacional e qualidade de atendimento, analisando dados, gerenciando campanhas<br />e sistemas de mensageria, além de documentar e otimizar processos internos.
                 </p>
               </div>
             </div>
@@ -119,14 +120,19 @@ export function AboutSection() {
         {/* Formação Acadêmica */}
         <div className="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
           <h2 className="text-2xl font-bold mb-4">Formação Acadêmica</h2>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="flex flex-col gap-4">
             <div>
               <h3 className="text-lg font-bold">Bacharelado em Sistemas de Informação</h3>
               <p className="text-zinc-400">7º/8º Período • Universidade Positivo</p>
             </div>
-            <div className="text-left md:text-right">
-              <div className="text-4xl font-bold text-cyan-400">87.5%</div>
-              <p className="text-sm text-zinc-400">Progresso</p>
+            <div>
+              <div className="flex justify-between items-center mb-2">
+                <p className="text-sm text-zinc-400">Progresso</p>
+                <span className="text-sm font-bold text-cyan-400">87.5%</span>
+              </div>
+              <div className="w-full bg-zinc-700 rounded-full h-3 overflow-hidden">
+                <div className="bg-cyan-400 h-full rounded-full transition-all duration-1000" style={{ width: '87.5%' }}></div>
+              </div>
             </div>
           </div>
         </div>
