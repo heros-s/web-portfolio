@@ -33,7 +33,7 @@ return (
         descricaoCurta={project.descricaoCurta}
     />
     <ProjectMedia 
-        imagem={project.imagem}
+        imagens={project.imagens}
         video={(project as { video?: string }).video}
         titulo={project.titulo}
     />
