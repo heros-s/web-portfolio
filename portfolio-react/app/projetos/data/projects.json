@@ -38,7 +38,8 @@
         "status": "Em uso ativo pela diretora"
     },
     "desafios": "Criação de tabela totalmente dinâmica controlada pelo usuário. Construção do funil financeiro. Modelagem para permitir comparações entre períodos.",
-    "imagem": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+    "imagem": "/projects/dash-financeiro.png",
+    "video": "https://www.youtube.com/embed/R0JvCRZbR4c?si=4ZqtyS_pbwNHx6pu",
     "status": "producao-mock"
     },
     {
@@ -58,7 +59,8 @@
         "execucoes": "Horária, automatizada"
     },
     "desafios": "Aprendizado e implementação de integrações Python com PostgreSQL e SFTP. Garantir estabilidade e tolerância a falhas de conexão. Criar solução robusta sem infraestrutura dedicada.",
-    "imagem": "https://images.unsplash.com/photo-1516321318423-f06f70a504f2?w=800&h=450&fit=crop",
+    "imagem": "/projects/code-censored.png",
+    "video": "https://www.youtube.com/embed/WhfSWSUW2sg?si=jox37XuxSfCmhsva",
     "status": "producao-mock"
     },
     {
@@ -67,7 +69,7 @@
     "titulo": "Dashboard de Monitoramento de Créditos de IA",
     "subtitulo": "FinOps & Governança de Consumo de IA",
     "descricaoCurta": "Dashboard que previne consumo descontrolado de créditos de IA",
-    "categoria": "analytics",
+    "categoria": "bi",
     "tecnologias": ["Looker Studio", "Google Sheets", "DAX", "Modelagem"],
     "problema": "Ausência total de visibilidade sobre quem estava consumindo créditos de IA, quanto cada área consumia e se o consumo estava trazendo retorno real. Ocorriam picos inesperados de consumo sem explicação clara, gerando risco de esgotamento prematuro dos créditos e impactando operações críticas. A alta gestão tinha dificuldade em tomar decisões preventivas.",
     "solucao": "Desenvolveu-se um dashboard analítico que permite prever em quantas semanas os créditos serão esgotados, monitorar o consumo de créditos ao longo do tempo, identificar consumo por profissional e setor, calcular a média semanal de consumo e apoiar decisões estratégicas sobre uso e investimento em IA. O dashboard é alimentado por arquivo CSV semanal do fornecedor da plataforma de IA.",
@@ -78,7 +80,8 @@
         "projecao": "Previsão de esgotamento dos créditos"
     },
     "desafios": "Introdução de FinOps aplicado a IA. Visibilidade completa sobre consumo. Apoio à governança e controle financeiro.",
-    "imagem": "https://images.unsplash.com/photo-1633356157298-5e11ad77c6b9?w=800&h=450&fit=crop",
+    "imagem": "/projects/foto-finops.png",
+    "video": "https://www.youtube.com/embed/Pjgazs-q5Uk?si=wjwIVzACSGdEZ5Dr",
     "status": "producao-mock"
     },
     {
@@ -98,7 +101,8 @@
         "usuarios": "RH, Diretoria, Lideranças"
     },
     "desafios": "Colunas calculadas para quadrimestre e favorabilidade. Comparações entre pesquisas com intervalos irregulares. Medidas DAX para evolução histórica. Word cloud com tratamento de stop words.",
-    "imagem": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop",
+    "imagem": "/projects/print-dash-engajamento.png",
+    "video": "https://www.youtube.com/embed/3lJ5_fJwFNA?si=YVI3bm5ZA_SzYCRV",
     "status": "producao-mock"
     },
     {
@@ -118,7 +122,8 @@
         "atualizacoes": "Manual via botão customizado"
     },
     "desafios": "Integração com Google Maps API. Cálculo de trajeto real vs distância em linha reta. Escabilidade com atualizações frequentes.",
-    "imagem": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=450&fit=crop",
+    "imagem": "/projects/apps-script-esg.png",
+    "video": "https://www.youtube.com/embed/8hnnrkrXGzs?si=Up4XOTgcftseB_-5",
     "status": "producao-mock"
     },
     {
@@ -138,7 +143,8 @@
         "usuarios": "RH, Gestão Financeira"
     },
     "desafios": "Primeiro contato prático com web scraping. Uso de Selenium para lidar com páginas dinâmicas. Estruturação e tratamento de dados coletados. Entendimento de limitações técnicas de fontes externas.",
-    "imagem": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop",
+    "imagem": "/projects/web-scraping.png",
+    "video": "https://www.youtube.com/embed/KJU7EnywKdM",
     "status": "producao-mock"
     }
 ]

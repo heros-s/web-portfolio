@@ -1,4 +1,7 @@
+'use client'
+
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 // Estrutura do Navbar
 export function Navbar() {
@@ -27,10 +30,10 @@ export function Navbar() {
 
                 {/* Links Desktop */}
                 <div className="hidden md:flex gap-8 items-center">
-                    <a href="#home" className="text-gray-300 hover:text-white transition-all">Início</a>
-                    <a href="#projetos" className="text-gray-300 hover:text-white transition-all">Projetos</a>
-                    <a href="#sobre" className="text-gray-300 hover:text-white transition-all">Sobre</a>
-                    <a href="#contact" className="px-4 py-2 bg-cyan-500 text-black rounded-lg hover:bg-cyan-400 transition-all">Contato</a>
+                    <Link href="/#home" className="text-gray-300 hover:text-white transition-all">Início</Link>
+                    <Link href="/#projetos" className="text-gray-300 hover:text-white transition-all">Projetos</Link>
+                    <Link href="/#sobre" className="text-gray-300 hover:text-white transition-all">Sobre</Link>
+                    <Link href="/#contact" className="px-4 py-2 bg-cyan-500 text-black rounded-lg hover:bg-cyan-400 transition-all">Contato</Link>
                 </div>
 
                 {/* Botão Hambúrguer (Mobile) */}
@@ -67,21 +70,21 @@ export function Navbar() {
 
                 {/* Lista de Links */}
                 <nav className="flex flex-col gap-2 p-6">
-                    <a href="#home" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">Início</a>
-                    <a href="#projetos" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">Projetos</a>
-                    <a href="#sobre" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">Sobre</a>
-                    <a href="#contact" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">Contato</a>
+                    <Link href="/#home" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">Início</Link>
+                    <Link href="/#projetos" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">Projetos</Link>
+                    <Link href="/#sobre" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">Sobre</Link>
+                    <Link href="/#contact" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">Contato</Link>
                 </nav>
 
                 {/* Footer do Menu (CTA) */}
                 <div className="p-6 border-t border-zinc-800 mt-auto">
-                    <a 
-                        href="#contact" 
+                    <Link 
+                        href="/#contact" 
                         onClick={closeMenu}
                         className="block w-full px-4 py-3 bg-cyan-500 text-black font-bold rounded-lg hover:bg-cyan-400 transition-all text-center"
                     >
                         Entrar em Contato
-                    </a>
+                    </Link>
                 </div>
             </div>
         </nav>

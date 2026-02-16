@@ -1,13 +1,19 @@
 // Home Page
 'use client' // Permite utilização de hooks como useState
-import { Navbar } from "./components/Navbar"
 import { HeroSection } from "./components/HeroSection"
+import { TechStackCarousel } from "./components/TechStackCarousel"
 import { useState } from "react";
 import { ProjectCard } from './components/ProjectCard'
 import { AboutSection } from './components/AboutSection'
 import { ContactSection } from './components/ContactSection'
-import { Footer } from './components/Footer'
 import projectsData from "./projetos/data/projects.json"
+
+const CATEGORY_MAP: Record<string, string> = {
+  'all': 'Todos',
+  'automacao': 'Automação',
+  'bi': 'BI & Analytics',
+  'data': 'Dados',
+}
 
 export default function Home() {
   const [filter, setFilter] = useState('all')
@@ -16,18 +22,19 @@ export default function Home() {
     id: p.id,
     title: p.titulo,
     subtitle: p.subtitulo,
-    categories: p.categoria ? [p.categoria] : [],
-    slug: p.slug  // ✅ ADICIONA O SLUG
+    categories: p.categoria ? [CATEGORY_MAP[p.categoria] || p.categoria] : [],
+    rawCategory: p.categoria,
+    slug: p.slug
   }))
 
   const filtered = filter === 'all'
     ? projects
-    : projects.filter(p => p.categories.includes(filter))
+    : projects.filter(p => p.rawCategory === filter)
 
   return (
     <>
-      <Navbar />
       <HeroSection />
+      <TechStackCarousel />
       <AboutSection />
       {/* Seção de Projetos */}
       <section id="projetos" className="bg-zinc-950 text-white py-20 px-6">
@@ -35,21 +42,21 @@ export default function Home() {
           <h1 className="text-4xl font-bold mb-10 text-center">Meus Projetos</h1>
           {/* Filtros */}
           <div className="flex gap-3 mb-10 flex-wrap justify-center">
-            {['all', 'Automação', 'BI', 'Data'].map(cat => (
+            {Object.keys(CATEGORY_MAP).map(catKey => (
               <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-lg border transition ${filter === cat
+                key={catKey}
+                onClick={() => setFilter(catKey)}
+                className={`px-4 py-2 rounded-lg border transition ${filter === catKey
                   ? 'bg-cyan-500 text-black border-cyan-500'
                   : 'border-zinc-700 hover:border-cyan-400'
                   }`}
               >
-                {cat === 'all' ? 'Todos' : cat.toUpperCase()}
+                {CATEGORY_MAP[catKey]}
               </button>
             ))}
           </div>
           {/* Cards Filtrados */}
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-8">
             {filtered.map(project => (
               <ProjectCard
                 key={project.id}
@@ -63,7 +70,6 @@ export default function Home() {
         </div>
       </section>
       <ContactSection />
-      <Footer />
     </>
   )
 }

@@ -10,18 +10,21 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, subtitle, categories, slug }: ProjectCardProps) {
     return (
-        <Link href={`/projetos/${slug}`}>  {/* ✅ WRAP COM LINK */}
-        <div className="w-full sm:w-[350px] border border-zinc-800 p-5 rounded-2xl hover:border-cyan-400 transition-all text-center">
-            <h3 className="text-lg font-semibold text-white">{title}</h3>
-            <p className="text-sm text-zinc-400 mt-2">{subtitle}</p>
-            <div className="flex gap-2 justify-center mt-3 flex-wrap">
-                {categories.map((cat, index) => (
-                    <span key={index} className="text-xs text-cyan-400 px-2 py-1 bg-cyan-400/10 rounded-full">
-                        {cat}
-                    </span>
-                ))}
+        <Link href={`/projetos/${slug}`} className="block h-full w-full sm:w-auto">
+            <div className="flex flex-col h-full w-full sm:w-[350px] border border-zinc-800 p-6 rounded-2xl hover:border-cyan-400 transition-all text-center bg-zinc-900/50 group">
+                <div className="grow flex flex-col justify-center mb-4">
+                    <h3 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-cyan-400 transition-colors">{title}</h3>
+                    <p className="text-sm text-zinc-400 line-clamp-3">{subtitle}</p>
+                </div>
+                
+                <div className="flex gap-2 justify-center flex-wrap pt-4 border-t border-zinc-800/50">
+                    {categories.map((cat, index) => (
+                        <span key={index} className="text-[10px] uppercase tracking-wider text-cyan-400 px-2 py-0.5 bg-cyan-400/10 rounded-full border border-cyan-400/20">
+                            {cat}
+                        </span>
+                    ))}
+                </div>
             </div>
-        </div>
         </Link>
     )
 }
