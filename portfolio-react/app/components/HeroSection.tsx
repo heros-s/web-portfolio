@@ -13,7 +13,7 @@ export function HeroSection() {
 
                 {/* Subtítulo */}
                 <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                    Integro dados, automatizo processos e construo ferramentas que fazem operações rodarem sozinhas.
+                    Transformei 2h/dia de trabalho manual em automação
                 </p>
 
                 {/* CTA Botões */}
