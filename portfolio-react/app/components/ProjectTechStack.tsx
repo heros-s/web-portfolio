@@ -1,19 +1,25 @@
 interface ProjectTechStackProps {
   tecnologias: string[]
-  categoria: string
+  categorias: string[]
   desafios: string
 }
 
-export function ProjectTechStack({ tecnologias, categoria, desafios }: ProjectTechStackProps) {
+export function ProjectTechStack({ tecnologias, categorias, desafios }: ProjectTechStackProps) {
   return (
     <section className="bg-zinc-900/50 text-white py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8">Detalhes Técnicos</h2>
 
-        {/* Categoria */}
+        {/* Categorias */}
         <div className="mb-10">
-          <h3 className="text-xl font-semibold mb-3 text-cyan-400">Categoria</h3>
-          <p className="text-lg text-zinc-300 capitalize">{categoria}</p>
+          <h3 className="text-xl font-semibold mb-3 text-cyan-400">Categorias</h3>
+          <div className="flex flex-wrap gap-2">
+            {categorias.map((cat, index) => (
+              <p key={index} className="text-lg text-zinc-300 capitalize">
+                {cat}{index < categorias.length - 1 ? "," : ""}
+              </p>
+            ))}
+          </div>
         </div>
 
         {/* Stack de tecnologias */}

@@ -48,7 +48,7 @@ return (
     />
     <ProjectTechStack 
         tecnologias={project.tecnologias}
-        categoria={project.categoria}
+        categorias={project.categorias}
         desafios={project.desafios}
     />
     </div>

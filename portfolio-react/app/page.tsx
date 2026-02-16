@@ -22,14 +22,14 @@ export default function Home() {
     id: p.id,
     title: p.titulo,
     subtitle: p.subtitulo,
-    categories: p.categoria ? [CATEGORY_MAP[p.categoria] || p.categoria] : [],
-    rawCategory: p.categoria,
+    categories: p.categorias.map(cat => CATEGORY_MAP[cat] || cat),
+    rawCategories: p.categorias,
     slug: p.slug
   }))
 
   const filtered = filter === 'all'
     ? projects
-    : projects.filter(p => p.rawCategory === filter)
+    : projects.filter(p => p.rawCategories.includes(filter))
 
   return (
     <>
