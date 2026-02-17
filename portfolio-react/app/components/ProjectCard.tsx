@@ -18,8 +18,8 @@ export function ProjectCard({ title, subtitle, categories, slug }: ProjectCardPr
                 </div>
                 
                 <div className="flex gap-2 justify-center flex-wrap pt-4 border-t border-zinc-800/50">
-                    {categories.map((cat, index) => (
-                        <span key={index} className="text-[10px] uppercase tracking-wider text-cyan-400 px-2 py-0.5 bg-cyan-400/10 rounded-full border border-cyan-400/20">
+                    {categories.map((cat) => (
+                        <span key={cat} className="text-[10px] uppercase tracking-wider text-cyan-400 px-2 py-0.5 bg-cyan-400/10 rounded-full border border-cyan-400/20">
                             {cat}
                         </span>
                     ))}

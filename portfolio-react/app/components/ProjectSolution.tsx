@@ -1,13 +1,17 @@
+import { useTranslations } from 'next-intl';
+
 interface ProjectSolutionProps {
   solucao: string
   tecnologias: string[]
 }
 
 export function ProjectSolution({ solucao, tecnologias }: ProjectSolutionProps) {
+  const t = useTranslations('projectPage.sections');
+
   return (
     <section className="bg-zinc-900/50 text-white py-20 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8">A Solução</h2>
+        <h2 className="text-4xl font-bold mb-8">{t('solution')}</h2>
         
         {/* Texto da solução */}
         <div className="mb-10">
@@ -18,7 +22,7 @@ export function ProjectSolution({ solucao, tecnologias }: ProjectSolutionProps) 
 
         {/* Stack usada na solução */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-cyan-400">Tecnologias Aplicadas</h3>
+          <h3 className="text-xl font-semibold mb-4 text-cyan-400">{t('techStack')}</h3>
           <div className="flex flex-wrap gap-3">
             {tecnologias.map((tech) => (
               <span 

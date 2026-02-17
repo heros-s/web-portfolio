@@ -1,23 +1,35 @@
+import { useTranslations } from 'next-intl';
+
 interface Metricas {
   [key: string]: string | number
 }
 
 interface ProjectImpactProps {
-  impacto: string
+  impacto: string | string[]
   metricas: Metricas
 }
 
 export function ProjectImpact({ impacto, metricas }: ProjectImpactProps) {
+  const t = useTranslations('projectPage.sections');
+
   return (
     <section className="bg-zinc-950 text-white py-20 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8">Impacto & Resultados</h2>
+        <h2 className="text-4xl font-bold mb-8">{t('impact')}</h2>
 
         {/* Descrição do impacto */}
         <div className="mb-12">
-          <p className="text-lg text-zinc-300 leading-relaxed">
-            {impacto}
-          </p>
+          {Array.isArray(impacto) ? (
+            <ul className="list-disc list-inside space-y-2 text-lg text-zinc-300">
+              {impacto.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-lg text-zinc-300 leading-relaxed">
+              {impacto}
+            </p>
+          )}
         </div>
 
         {/* Métricas em cards */}

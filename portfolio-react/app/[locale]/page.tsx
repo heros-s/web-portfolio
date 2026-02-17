@@ -1,26 +1,29 @@
 // Home Page
 'use client' // Permite utilização de hooks como useState
-import { HeroSection } from "./components/HeroSection"
-import { TechStackCarousel } from "./components/TechStackCarousel"
+import { HeroSection } from "../components/HeroSection"
+import { TechStackCarousel } from "../components/TechStackCarousel"
 import { useState } from "react";
-import { ProjectCard } from './components/ProjectCard'
-import { AboutSection } from './components/AboutSection'
-import { ContactSection } from './components/ContactSection'
+import { ProjectCard } from '../components/ProjectCard'
+import { AboutSection } from '../components/AboutSection'
+import { ContactSection } from '../components/ContactSection'
 import projectsData from "./projetos/data/projects.json"
-
-const CATEGORY_MAP: Record<string, string> = {
-  'all': 'Todos',
-  'automacao': 'Automação',
-  'bi': 'BI & Analytics',
-  'data': 'Dados',
-}
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('projects');
   const [filter, setFilter] = useState('all')
+
+  const CATEGORY_MAP: Record<string, string> = {
+    'all': t('filters.all'),
+    'automacao': t('filters.automation'),
+    'bi': t('filters.bi'),
+    'data': t('filters.dataEngineering'),
+    'analytics': t('filters.analytics'),
+  }
 
   const projects = projectsData.projetos.map(p => ({
     id: p.id,
-    title: p.titulo,
+    title: p.titulo, // This could also be translated if needed, mapping pjt1, pjt2 etc
     subtitle: p.subtitulo,
     categories: p.categorias.map(cat => CATEGORY_MAP[cat] || cat),
     rawCategories: p.categorias,
@@ -39,7 +42,7 @@ export default function Home() {
       {/* Seção de Projetos */}
       <section id="projetos" className="bg-zinc-950 text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-10 text-center">Meus Projetos</h1>
+          <h1 className="text-4xl font-bold mb-10 text-center">{t('sectionTitle')}</h1>
           {/* Filtros */}
           <div className="flex gap-3 mb-10 flex-wrap justify-center">
             {Object.keys(CATEGORY_MAP).map(catKey => (
