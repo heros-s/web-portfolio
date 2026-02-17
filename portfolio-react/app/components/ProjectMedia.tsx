@@ -35,7 +35,6 @@ export function ProjectMedia({ imagens, video, titulo }: ProjectMediaProps) {
           
           {/* Imagem Hero */}
           <div className="space-y-4">
-            <h3 className="text-sm uppercase tracking-[0.2em] text-cyan-500 font-semibold mb-2 text-center">Visualização Principal</h3>
             <div 
               className="relative group overflow-hidden rounded-2xl border border-zinc-800 shadow-2xl aspect-video cursor-zoom-in bg-zinc-900"
               onClick={() => setZoomedImage(heroImage)}
@@ -58,7 +57,6 @@ export function ProjectMedia({ imagens, video, titulo }: ProjectMediaProps) {
 
           {/* Container do Vídeo */}
           <div className="space-y-4">
-            <h3 className="text-sm uppercase tracking-[0.2em] text-cyan-500 font-semibold mb-2 text-center">Vídeo de Demonstração</h3>
             <div className="relative rounded-2xl border border-zinc-800 shadow-2xl overflow-hidden aspect-video bg-zinc-900 flex items-center justify-center group">
               {video ? (
                 <iframe
