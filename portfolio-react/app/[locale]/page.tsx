@@ -23,8 +23,8 @@ export default function Home() {
 
   const projects = projectsData.projetos.map(p => ({
     id: p.id,
-    title: p.titulo, // This could also be translated if needed, mapping pjt1, pjt2 etc
-    subtitle: p.subtitulo,
+    title: t(`items.${p.key}.title`),
+    subtitle: t(`items.${p.key}.subtitle`),
     categories: p.categorias.map(cat => CATEGORY_MAP[cat] || cat),
     rawCategories: p.categorias,
     slug: p.slug

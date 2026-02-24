@@ -1,7 +1,9 @@
 "use client";
 import { useForm, ValidationError } from '@formspree/react';
+import { useTranslations } from 'next-intl';
 
 export function ContactSection() {
+    const t = useTranslations('contact');
     const [state, handleSubmit] = useForm("mgolaqyj");
 
     if (state.succeeded) {
@@ -9,16 +11,16 @@ export function ContactSection() {
             <section id="contact" className="py-20 bg-zinc-900/50">
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                        Mensagem Enviada!
+                        {t('success.title')}
                     </h2>
                     <p className="text-zinc-400 text-lg">
-                        Obrigado pelo contato. Responderei em breve.
+                        {t('success.description')}
                     </p>
                     <button 
                         onClick={() => window.location.reload()}
                         className="mt-8 px-6 py-3 bg-zinc-800 text-white rounded-lg hover:bg-zinc-700 transition"
                     >
-                        Voltar ao formulário
+                        {t('success.backToForm')}
                     </button>
                 </div>
             </section>
@@ -30,18 +32,18 @@ export function ContactSection() {
             <div className="max-w-4xl mx-auto px-6">
                 {/* Título Principal */}
                 <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
-                    Tem um projeto em mente ou quer explorar oportunidades?
+                    {t('title')}
                 </h2>
 
                 {/* Subtítulo */}
                 <p className="text-zinc-400 text-lg mt-4 text-center">
-                    Estou aberto para freelances e colaborações em projetos. Vamos conversar sobre como posso ajudar você ou sua empresa.
+                    {t('subtitle')}
                 </p>
 
                 {/* Alternativas Sociais (Sutil) */}
                 <div className="mt-8 flex flex-col items-center gap-4">
                     <p className="text-zinc-500 text-sm font-medium uppercase tracking-wider">
-                        Prefere outras redes?
+                        {t('socialPrefix')}
                     </p>
                     <div className="flex gap-8">
                         {/* LinkedIn */}
@@ -79,7 +81,7 @@ export function ContactSection() {
                             id="name"
                             type="text"
                             name="name"
-                            placeholder="Seu nome"
+                            placeholder={t('form.name')}
                             className="w-full bg-zinc-900 border border-zinc-800 px-4 py-3 rounded-lg text-white focus:outline-none focus:border-cyan-500 transition-all"
                             required
                         />
@@ -95,7 +97,7 @@ export function ContactSection() {
                             id="email"
                             type="email"
                             name="email"
-                            placeholder="Seu e-mail"
+                            placeholder={t('form.email')}
                             className="w-full bg-zinc-900 border border-zinc-800 px-4 py-3 rounded-lg text-white focus:outline-none focus:border-cyan-500 transition-all"
                             required
                         />
@@ -111,7 +113,7 @@ export function ContactSection() {
                             id="subject"
                             type="text"
                             name="subject"
-                            placeholder="Assunto (freelance, parceria, etc)"
+                            placeholder={t('form.subject')}
                             className="w-full bg-zinc-900 border border-zinc-800 px-4 py-3 rounded-lg text-white focus:outline-none focus:border-cyan-500 transition-all"
                             required
                         />
@@ -120,7 +122,7 @@ export function ContactSection() {
                         <textarea
                             id="message"
                             name="message"
-                            placeholder="Descreva sua ideia, projeto ou oportunidade"
+                            placeholder={t('form.message')}
                             rows={5}
                             className="w-full bg-zinc-900 border border-zinc-800 px-4 py-3 rounded-lg text-white resize-none focus:outline-none focus:border-cyan-500 transition-all"
                             required
@@ -137,12 +139,12 @@ export function ContactSection() {
                         disabled={state.submitting}
                         className="w-full bg-cyan-500 text-black font-bold py-3 rounded-lg hover:bg-cyan-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        {state.submitting ? 'Enviando...' : 'Enviar Mensagem'}
+                        {state.submitting ? t('form.sending') : t('form.submit')}
                     </button>
                     
                     {/* Parágrafo de Status */}
                     <p className="text-center text-sm text-zinc-500 mt-3">
-                        Vou responder em até 24h
+                        {t('form.status')}
                     </p>
                 </form>
             </div>

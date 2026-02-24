@@ -28,7 +28,7 @@ export function ProjectTechStack({ tecnologias, categorias, desafios }: ProjectT
 
         {/* Stack de tecnologias */}
         <div className="mb-10">
-          <h3 className="text-xl font-semibold mb-4 text-cyan-400">Stack Técnico</h3>
+          <h3 className="text-xl font-semibold mb-4 text-cyan-400">{t('technicalStack')}</h3>
           <div className="flex flex-wrap gap-3">
             {tecnologias.map((tech) => (
               <span 

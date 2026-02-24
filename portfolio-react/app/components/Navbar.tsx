@@ -27,12 +27,12 @@ export function Navbar() {
 
                 {/* Logo */}
                 <div className="font-bold text-white text-lg">
-                    Heros Dinão
+                    {t('brandName')}
                 </div>
 
                 {/* Links Desktop */}
                 <div className="hidden md:flex gap-8 items-center">
-                    <Link href="/#home" className="text-gray-300 hover:text-white transition-all">{t('brand') === 'Heros.dev' ? 'Início' : t('home')}</Link>
+                    <Link href="/#home" className="text-gray-300 hover:text-white transition-all">{t('home')}</Link>
                     <Link href="/#projetos" className="text-gray-300 hover:text-white transition-all">{t('projects')}</Link>
                     <Link href="/#sobre" className="text-gray-300 hover:text-white transition-all">{t('about')}</Link>
                     <Link href="/#contact" className="px-4 py-2 bg-cyan-500 text-black rounded-lg hover:bg-cyan-400 transition-all">{t('contact')}</Link>
@@ -72,7 +72,7 @@ export function Navbar() {
 
                 {/* Lista de Links */}
                 <nav className="flex flex-col gap-2 p-6">
-                    <Link href="/#home" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">{t('home') || 'Início'}</Link>
+                    <Link href="/#home" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">{t('home')}</Link>
                     <Link href="/#projetos" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">{t('projects')}</Link>
                     <Link href="/#sobre" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">{t('about')}</Link>
                     <Link href="/#contact" onClick={closeMenu} className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-all">{t('contact')}</Link>

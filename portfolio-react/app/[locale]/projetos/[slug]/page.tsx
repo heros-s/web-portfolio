@@ -11,7 +11,6 @@ import { ProjectMedia } from "../../../components/ProjectMedia"
 
 import { use } from 'react'
 import { useTranslations } from 'next-intl';
-import { Link } from "../../../../i18n/navigation";
 
 interface ProjectPageProps {
   // In Next.js 15+, params is a Promise
@@ -25,38 +24,39 @@ export default function ProjectPage(props: ProjectPageProps) {
   
   const tp = useTranslations('projects.items');
   const tNav = useTranslations('projectPage');
+  const tf = useTranslations('projects.filters');
 
   if (!projectBase) {
-    return <div>Projeto não encontrado</div>
+    return <div>{tNav('projectNotFound')}</div>
   }
 
-  // Map JSON ID to the translation key prefix (e.g. "pjt1")
-  const pKey = projectBase.id;
+  const CATEGORY_MAP: Record<string, string> = {
+    'automacao': tf('automation'),
+    'bi': tf('bi'),
+    'data': tf('dataEngineering'),
+    'analytics': tf('analytics'),
+  }
+
+  // Map JSON key to the translation key prefix (e.g. "pjt1")
+  const pKey = projectBase.key;
   
   // Get translated content
   const project = {
     ...projectBase,
     titulo: tp(`${pKey}.title`),
     subtitulo: tp(`${pKey}.subtitle`),
+    categoriasTraduzidas: projectBase.categorias.map(cat => CATEGORY_MAP[cat] || cat).join(' & '),
     problema: tp(`${pKey}.problem`),
     solucao: tp(`${pKey}.solution`),
   };
 
   return (
     <div className="bg-zinc-950 text-white pb-10">
-      <div className="max-w-4xl mx-auto px-6 pt-10">
-        <Link 
-          href="/#projetos" 
-          className="text-cyan-400 hover:text-cyan-300 transition flex items-center gap-2 mb-4"
-        >
-          {tNav('backToProjects')}
-        </Link>
-      </div>
 
       <ProjectHero 
         titulo={project.titulo}
-        subtitulo={project.subtitulo}
-        descricaoCurta={tp(`${pKey}.subtitle`)}
+        subtitulo={project.categoriasTraduzidas}
+        descricaoCurta={project.subtitulo}
       />
       <ProjectMedia 
         imagens={projectBase.imagens}

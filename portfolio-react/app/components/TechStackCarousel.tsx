@@ -25,7 +25,10 @@ const stacks: Stack[] = [
   { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-300' },
 ]
 
+import { useTranslations } from 'next-intl';
+
 export function TechStackCarousel() {
+  const t = useTranslations('techStack');
   const renderStack = (stack: Stack, index: number, prefix: string) => (
     <div key={`${prefix}-${index}`} className="flex flex-col items-center mx-8 min-w-[80px] group transition-all duration-300 hover:scale-110 cursor-pointer">
       <div className="h-12 md:h-16 flex items-center justify-center mb-3">
@@ -53,10 +56,9 @@ export function TechStackCarousel() {
       
       <div className="max-w-6xl mx-auto mb-8 px-6 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-zinc-200 to-zinc-500">
-          Tecnologias que utilizo
+          {t('title')}
         </h2>
       </div>
-
       <div className="absolute inset-y-0 left-0 w-24 bg-linear-to-r from-zinc-950 to-transparent z-10 pointer-events-none"></div>
       <div className="absolute inset-y-0 right-0 w-24 bg-linear-to-l from-zinc-950 to-transparent z-10 pointer-events-none"></div>
       

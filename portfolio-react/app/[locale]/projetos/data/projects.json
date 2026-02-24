@@ -2,6 +2,7 @@
 "projetos": [
     {
     "id": 1,
+    "key": "pjt1",
     "slug": "automacao-horas-extras-n8n-slack",
     "titulo": "Automação de Aprovação de Horas Extras com n8n e Slack",
     "subtitulo": "Fluxo automatizado que reduz 2h/dia de trabalho manual",
@@ -23,6 +24,7 @@
     },
     {
     "id": 2,
+    "key": "pjt2",
     "slug": "dashboard-financeiro-analise-performance-power-bi",
     "titulo": "Dashboard Financeiro para Análise de Performance",
     "subtitulo": "KPIs financeiros com modelagem analítica em Power BI",
@@ -44,6 +46,7 @@
     },
     {
     "id": 3,
+    "key": "pjt3",
     "slug": "pipeline-dados-mailings-python-etl",
     "titulo": "Pipeline de Dados para Campanhas de Mailing",
     "subtitulo": "ETL automatizado que elimina execução manual de 15-20 min por ciclo",
@@ -65,6 +68,7 @@
     },
     {
     "id": 4,
+    "key": "pjt4",
     "slug": "dashboard-monitoramento-creditos-ia-looker-studio",
     "titulo": "Dashboard de Monitoramento de Créditos de IA",
     "subtitulo": "FinOps & Governança de Consumo de IA",
@@ -86,6 +90,7 @@
     },
     {
     "id": 5,
+    "key": "pjt5",
     "slug": "dashboard-experiencia-colaborador-enps-power-bi",
     "titulo": "Dashboard de Experiência do Colaborador (eNPS)",
     "subtitulo": "People Analytics que transforma pesquisa em insights acionáveis",
@@ -107,6 +112,7 @@
     },
     {
     "id": 6,
+    "key": "pjt6",
     "slug": "automacao-calculo-esg-google-sheets-apps-script-javascript",
     "titulo": "Automação de Cálculo de Gases do Efeito Estufa (ESG)",
     "subtitulo": "Cálculo automático de distância para relatórios ESG",
@@ -128,6 +134,7 @@
     },
     {
     "id": 7,
+    "key": "pjt7",
     "slug": "coleta-dados-salariais-web-scraping-python-selenium",
     "titulo": "Coleta Automatizada de Dados Salariais com Web Scraping",
     "subtitulo": "Automação que pesquisa 100+ cargos em minutos",

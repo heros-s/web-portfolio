@@ -1,5 +1,9 @@
+import { useTranslations } from 'next-intl';
+
 // Footer com links sociais
 export function Footer() {
+    const t = useTranslations('footer');
+
     return (
         <footer className="bg-black border-t border-zinc-800 py-8">
             <div className="max-w-6xl mx-auto px-6">
@@ -7,7 +11,7 @@ export function Footer() {
                     
                     {/* Nome/Copyright */}
                     <div className="text-zinc-400 text-sm">
-                        © 2026 Heros Dinão. Todos os direitos reservados.
+                        {t('copyright', { year: new Date().getFullYear() })}
                     </div>
 
                     {/* Links Sociais */}
