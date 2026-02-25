@@ -17,8 +17,7 @@ export default function Home() {
     'all': t('filters.all'),
     'automacao': t('filters.automation'),
     'bi': t('filters.bi'),
-    'data': t('filters.dataEngineering'),
-    'analytics': t('filters.analytics'),
+    'data': t('filters.dataEngineering')
   }
 
   const projects = projectsData.projetos.map(p => ({

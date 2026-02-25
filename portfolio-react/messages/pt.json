@@ -25,9 +25,8 @@
     "filters": {
       "all": "Todos",
       "automation": "Automação",
-      "bi": "BI",
-      "dataEngineering": "Data Engineering",
-      "analytics": "Analytics"
+      "bi": "BI & Analytics",
+      "dataEngineering": "Data Engineering"
     },
     "viewCase": "Ver caso completo →",
     "items": {
@@ -63,6 +62,12 @@
           "Normalização e tratamento de dados do relatório de ponto",
           "Integração entre múltiplos sistemas (ponto, chamados, Slack)"
         ],
+        "metrics": {
+          "timeSaved": { "label": "Tempo Economizado", "value": "~2 horas/dia" },
+          "weekly": { "label": "Semanalizado", "value": "~10 horas/semana" },
+          "monthly": { "label": "Mensal", "value": "~40 horas/mês" }
+        },
+        "categories": ["Automação", "Engenharia de Dados"],
         "funFact": "Esse foi o primeiro projeto de automação com persona implementado na empresa, utilizando um agente que interage como uma colaboradora real."
       },
       "pjt2": {
@@ -104,7 +109,13 @@
           "Lucro Bruto vs CMV",
           "Receita ao longo dos meses",
           "Cálculo de margens"
-        ]
+        ],
+        "metrics": {
+          "timeSaved": { "label": "Redução de Tempo", "value": "1h30min" },
+          "analysisSpeed": { "label": "Velocidade de Análise", "value": "Redução drástica" },
+          "status": { "label": "Status", "value": "Em uso ativo pela diretoria" }
+        },
+        "categories": ["BI"]
       },
       "pjt3": {
         "title": "Pipeline de Dados Automatizada para Campanhas de Mailing",
@@ -148,7 +159,13 @@
           "CSV exportado com nomenclatura dinâmica",
           "Pasta mapeada via SFTP",
           "Discador detecta arquivo e inicia campanha automaticamente"
-        ]
+        ],
+        "metrics": {
+          "timeSaved": { "label": "Redução de Tempo", "value": "15-20 min → ~7 min por ciclo" },
+          "efficiency": { "label": "Eficiência", "value": "Aumento de até 27%" },
+          "executions": { "label": "Execuções", "value": "Horária, automatizada" }
+        },
+        "categories": ["Automação", "Engenharia de Dados"]
       },
       "pjt4": {
         "title": "Dashboard de Monitoramento de Créditos de IA",
@@ -186,6 +203,12 @@
           "Consumo por profissional",
           "Consumo por área/setor"
         ],
+        "metrics": {
+          "updateFrequency": { "label": "Frequência de Atualização", "value": "Semanal" },
+          "users": { "label": "Usuários", "value": "CEO, Diretoria, Time de Inteligência Corporativa" },
+          "projection": { "label": "Projeção", "value": "Previsão de esgotamento dos créditos" }
+        },
+        "categories": ["Analytics"],
         "funFact": "Dashboard criado poucas semanas após adoção da plataforma, evitando problemas futuros de forma preventiva."
       },
       "pjt5": {
@@ -229,7 +252,13 @@
           "Análises comparativas departamentais",
           "Análise por liderança (coordenadores e heads)",
           "Word cloud dinâmica de comentários"
-        ]
+        ],
+        "metrics": {
+          "frequency": { "label": "Frequência da Pesquisa", "value": "Quadrimestral" },
+          "previousSlides": { "label": "Antes da Automação", "value": "200+ slides" },
+          "users": { "label": "Usuários", "value": "RH, Diretoria, Lideranças" }
+        },
+        "categories": ["BI"]
       },
       "pjt6": {
         "title": "Automação de Cálculo de Emissões de Gases (ESG)",
@@ -267,7 +296,13 @@
           "Dias presenciais",
           "Meio de transporte",
           "Tipo de combustível"
-        ]
+        ],
+        "metrics": {
+          "employees": { "label": "Colaboradores", "value": "150+" },
+          "precision": { "label": "Precisão", "value": "Trajeto terrestre real via Google Maps" },
+          "updates": { "label": "Atualizações", "value": "Manual via botão customizado" }
+        },
+        "categories": ["Automação"]
       },
       "pjt7": {
         "title": "Coleta Automatizada de Dados Salariais com Web Scraping",
@@ -302,11 +337,17 @@
         ],
         "pipeline": [
           "Leitura da base de cargos",
-          "Automação da navegação e busca por cargo",
+          "Automação da navigation e busca por cargo",
           "Extração do salário médio",
           "Tratamento e padronização dos valores",
           "Geração de CSV estruturado"
-        ]
+        ],
+        "metrics": {
+          "positions": { "label": "Cargos Pesquisados", "value": "100+" },
+          "execution": { "label": "Execução", "value": "Manual e sob demanda" },
+          "users": { "label": "Usuários", "value": "RH, Gestão Financeira" }
+        },
+        "categories": ["Automação", "Engenharia de Dados"]
       }
     }
   },
@@ -334,7 +375,7 @@
         "description": "n8n, Python, workflows inteligentes"
       },
       "dataBI": {
-        "title": "Data & BI",
+        "title": "Data, BI & Analytics",
         "description": "Power BI, ETL, análise e modelagem"
       },
       "strategyIA": {
@@ -373,7 +414,7 @@
     "title": "Skills",
     "categories": {
       "dataBI": {
-        "title": "Data & BI",
+        "title": "Data, BI & Analytics",
         "items": [
           "Power BI",
           "SQL",
@@ -454,6 +495,13 @@
       "dataInputs": "Dados de Entrada",
       "pipeline": "Pipeline",
       "funFact": "Fun Fact"
+    },
+    "media": {
+      "clickToEnlarge": "Clique para ampliar",
+      "videoUnavailable": "Vídeo indisponível no momento",
+      "bonusImages": "Fotos Bônus / Detalhes",
+      "viewPhoto": "Ver Foto",
+      "closeZoom": "Fechar zoom"
     }
   }
 }

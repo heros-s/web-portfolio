@@ -33,8 +33,7 @@ export default function ProjectPage(props: ProjectPageProps) {
   const CATEGORY_MAP: Record<string, string> = {
     'automacao': tf('automation'),
     'bi': tf('bi'),
-    'data': tf('dataEngineering'),
-    'analytics': tf('analytics'),
+    'data': tf('dataEngineering')
   }
 
   // Map JSON key to the translation key prefix (e.g. "pjt1")
@@ -45,13 +44,13 @@ export default function ProjectPage(props: ProjectPageProps) {
     ...projectBase,
     titulo: tp(`${pKey}.title`),
     subtitulo: tp(`${pKey}.subtitle`),
-    categoriasTraduzidas: projectBase.categorias.map(cat => CATEGORY_MAP[cat] || cat).join(' & '),
+    categoriasTraduzidas: tp.raw(`${pKey}.categories`) ? (tp.raw(`${pKey}.categories`) as string[]).join(' & ') : projectBase.categorias.map(cat => CATEGORY_MAP[cat] || cat).join(' & '),
     problema: tp(`${pKey}.problem`),
     solucao: tp(`${pKey}.solution`),
   };
 
   return (
-    <div className="bg-zinc-950 text-white pb-10">
+    <div className="bg-zinc-950 text-white">
 
       <ProjectHero 
         titulo={project.titulo}
@@ -70,11 +69,11 @@ export default function ProjectPage(props: ProjectPageProps) {
       />
       <ProjectImpact 
         impacto={tp.raw(`${pKey}.impact`) as string[]}
-        metricas={projectBase.metricas as unknown as Record<string, string | number>}
+        metricas={tp.raw(`${pKey}.metrics`) as unknown as Record<string, { label: string; value: string | number }>}
       />
       <ProjectTechStack 
         tecnologias={projectBase.tecnologias}
-        categorias={projectBase.categorias}
+        categorias={tp.raw(`${pKey}.categories`) as string[] || projectBase.categorias}
         desafios={tp.raw(`${pKey}.challenges`) as string[]}
       />
     </div>

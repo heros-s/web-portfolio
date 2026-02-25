@@ -25,9 +25,8 @@
     "filters": {
       "all": "All",
       "automation": "Automation",
-      "bi": "BI",
-      "dataEngineering": "Data Engineering",
-      "analytics": "Analytics"
+      "bi": "BI & Analytics",
+      "dataEngineering": "Data Engineering"
     },
     "viewCase": "View full case →",
     "items": {
@@ -63,6 +62,12 @@
           "Data normalization and treatment from time tracking reports",
           "Integration between multiple systems (time tracking, tickets, Slack)"
         ],
+        "metrics": {
+          "timeSaved": { "label": "Time Saved", "value": "~2 hours/day" },
+          "weekly": { "label": "Weekly", "value": "~10 hours/week" },
+          "monthly": { "label": "Monthly", "value": "~40 hours/month" }
+        },
+        "categories": ["Automation", "Data Engineering"],
         "funFact": "This was the first automation project with a persona implemented at the company, using an agent that interacts as a real employee."
       },
       "pjt2": {
@@ -104,7 +109,13 @@
           "Gross Profit vs COGS",
           "Revenue over months",
           "Margin calculations"
-        ]
+        ],
+        "metrics": {
+          "timeSaved": { "label": "Time Reduction", "value": "1h 30m" },
+          "analysisSpeed": { "label": "Analysis Speed", "value": "Drastic reduction" },
+          "status": { "label": "Status", "value": "Actively used by the board" }
+        },
+        "categories": ["BI"]
       },
       "pjt3": {
         "title": "Automated Data Pipeline for Mailing Campaigns",
@@ -148,7 +159,13 @@
           "CSV exported with dynamic naming",
           "Folder mapped via SFTP",
           "Dialer detects file and automatically starts campaign"
-        ]
+        ],
+        "metrics": {
+          "timeSaved": { "label": "Time Reduction", "value": "15-20 min → ~7 min per cycle" },
+          "efficiency": { "label": "Efficiency", "value": "Up to 27% increase" },
+          "executions": { "label": "Executions", "value": "Hourly, automated" }
+        },
+        "categories": ["Automation", "Data Engineering"]
       },
       "pjt4": {
         "title": "AI Credits Monitoring Dashboard",
@@ -186,6 +203,12 @@
           "Consumption by professional",
           "Consumption by area/sector"
         ],
+        "metrics": {
+          "updateFrequency": { "label": "Update Frequency", "value": "Weekly" },
+          "users": { "label": "Users", "value": "CEO, Board, Corporate Intelligence Team" },
+          "projection": { "label": "Projection", "value": "Credit depletion forecast" }
+        },
+        "categories": ["Analytics"],
         "funFact": "Dashboard created weeks after platform adoption, preventively avoiding future issues."
       },
       "pjt5": {
@@ -229,7 +252,13 @@
           "Departmental comparative analyses",
           "Leadership analysis (coordinators and heads)",
           "Dynamic comment word cloud"
-        ]
+        ],
+        "metrics": {
+          "frequency": { "label": "Survey Frequency", "value": "Four-monthly" },
+          "previousSlides": { "label": "Before Automation", "value": "200+ slides" },
+          "users": { "label": "Users", "value": "HR, Board, Leaders" }
+        },
+        "categories": ["BI"]
       },
       "pjt6": {
         "title": "GHG Emissions Calculation Automation (ESG)",
@@ -267,7 +296,13 @@
           "On-site days",
           "Transportation mode",
           "Fuel type"
-        ]
+        ],
+        "metrics": {
+          "employees": { "label": "Employees", "value": "150+" },
+          "precision": { "label": "Precision", "value": "Actual ground route via Google Maps" },
+          "updates": { "label": "Updates", "value": "Manual via custom button" }
+        },
+        "categories": ["Automation"]
       },
       "pjt7": {
         "title": "Automated Salary Data Collection with Web Scraping",
@@ -306,7 +341,13 @@
           "Average salary extraction",
           "Value treatment and standardization",
           "Structured CSV generation"
-        ]
+        ],
+        "metrics": {
+          "positions": { "label": "Positions Researched", "value": "100+" },
+          "execution": { "label": "Execution", "value": "Manual and on-demand" },
+          "users": { "label": "Users", "value": "HR, Finance Management" }
+        },
+        "categories": ["Automation", "Data Engineering"]
       }
     }
   },
@@ -334,7 +375,7 @@
         "description": "n8n, Python, intelligent workflows"
       },
       "dataBI": {
-        "title": "Data & BI",
+        "title": "Data, BI & Analytics",
         "description": "Power BI, ETL, analysis, and modeling"
       },
       "strategyIA": {
@@ -373,7 +414,7 @@
     "title": "Skills",
     "categories": {
       "dataBI": {
-        "title": "Data & BI",
+        "title": "Data, BI & Analytics",
         "items": [
           "Power BI",
           "SQL",
@@ -454,6 +495,13 @@
       "dataInputs": "Data Inputs",
       "pipeline": "Pipeline",
       "funFact": "Fun Fact"
+    },
+    "media": {
+      "clickToEnlarge": "Click to enlarge",
+      "videoUnavailable": "Video unavailable at the moment",
+      "bonusImages": "Bonus Photos / Details",
+      "viewPhoto": "View Photo",
+      "closeZoom": "Close zoom"
     },
     "projectNotFound": "Project not found"
   }

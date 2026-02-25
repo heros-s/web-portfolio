@@ -1,7 +1,6 @@
-'use client'
-
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface ProjectMediaProps {
   imagens: string[]
@@ -11,6 +10,7 @@ interface ProjectMediaProps {
 
 export function ProjectMedia({ imagens, video, titulo }: ProjectMediaProps) {
   const [zoomedImage, setZoomedImage] = useState<string | null>(null)
+  const t = useTranslations('projectPage.media');
   
   const heroImage = imagens[0]
   const bonusImages = imagens.slice(1)
@@ -49,7 +49,7 @@ export function ProjectMedia({ imagens, video, titulo }: ProjectMediaProps) {
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                 <span className="text-white font-medium text-sm bg-black/50 px-4 py-2 rounded-full backdrop-blur-md border border-white/10">
-                  Clique para ampliar
+                  {t('clickToEnlarge')}
                 </span>
               </div>
             </div>
@@ -86,7 +86,7 @@ export function ProjectMedia({ imagens, video, titulo }: ProjectMediaProps) {
                     <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
                     <path d="m9 8 7 4-7 4Z" />
                   </svg>
-                  <p className="text-sm font-medium">Vídeo indisponível no momento</p>
+                  <p className="text-sm font-medium">{t('videoUnavailable')}</p>
                 </div>
               )}
             </div>
@@ -96,7 +96,7 @@ export function ProjectMedia({ imagens, video, titulo }: ProjectMediaProps) {
         {/* Seção Fotos Bônus (se houver) */}
         {bonusImages.length > 0 && (
           <div className="pt-12 border-t border-zinc-900">
-            <h3 className="text-sm uppercase tracking-[0.2em] text-cyan-500 font-semibold mb-8 text-center">Fotos Bônus / Detalhes</h3>
+            <h3 className="text-sm uppercase tracking-[0.2em] text-cyan-500 font-semibold mb-8 text-center">{t('bonusImages')}</h3>
             <div className="flex flex-wrap justify-center gap-8">
               {bonusImages.map((img, index) => (
                 <div 
@@ -111,9 +111,9 @@ export function ProjectMedia({ imagens, video, titulo }: ProjectMediaProps) {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="text-white text-xs font-bold uppercase tracking-widest bg-cyan-600/80 px-3 py-1.5 rounded-lg backdrop-blur-sm">
-                      Ver Foto
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <span className="text-white font-medium text-sm bg-black/50 px-4 py-2 rounded-full backdrop-blur-md border border-white/10">
+                      {t('clickToEnlarge')}
                     </span>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export function ProjectMedia({ imagens, video, titulo }: ProjectMediaProps) {
           <button 
             className="absolute top-6 right-6 text-white/50 hover:text-white text-4xl transition-colors z-110 p-2"
             onClick={() => setZoomedImage(null)}
-            aria-label="Fechar zoom"
+            aria-label={t('closeZoom')}
           >
             &times;
           </button>
