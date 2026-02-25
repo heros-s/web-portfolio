@@ -23,7 +23,7 @@ export function HeroSection() {
                 {/* CTA Botões */}
                 <div className="flex gap-4 justify-center flex-wrap">
                     <a
-                        href="#projects"
+                        href="#projetos"
                         className="px-8 py-3 bg-cyan-500 text-black font-bold rounded-lg hover:bg-cyan-400 transition"
                     >
                         {t('ctaPrimary')}

@@ -81,7 +81,8 @@ export function Navbar() {
                 </nav>
 
                 {/* Footer do Menu (CTA) */}
-                <div className="p-6 border-t border-zinc-800 mt-auto">
+                <div className="p-6 border-t border-zinc-800 mt-auto flex flex-col gap-3">
+                    <LanguageSwitcher />
                     <Link 
                         href="/#contact" 
                         onClick={closeMenu}

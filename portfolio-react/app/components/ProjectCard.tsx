@@ -1,5 +1,5 @@
 // COMPONENTE que recebe dados via props
-import Link from "next/link"
+import { Link } from "../../i18n/navigation"
 
 interface ProjectCardProps {
     title: string;
