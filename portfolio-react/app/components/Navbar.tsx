@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "../../i18n/navigation";
 import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 // Estrutura do Navbar
 export function Navbar() {
@@ -35,6 +36,7 @@ export function Navbar() {
                     <Link href="/#home" className="text-gray-300 hover:text-white transition-all">{t('home')}</Link>
                     <Link href="/#projetos" className="text-gray-300 hover:text-white transition-all">{t('projects')}</Link>
                     <Link href="/#sobre" className="text-gray-300 hover:text-white transition-all">{t('about')}</Link>
+                    <LanguageSwitcher />
                     <Link href="/#contact" className="px-4 py-2 bg-cyan-500 text-black rounded-lg hover:bg-cyan-400 transition-all">{t('contact')}</Link>
                 </div>
 
